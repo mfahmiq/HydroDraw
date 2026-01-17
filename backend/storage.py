@@ -3,9 +3,20 @@ import os
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 
+import sys
+
 class JSONStore:
-    def __init__(self, data_dir: str = "data"):
-        self.data_dir = Path(__file__).parent / data_dir
+    def __init__(self, data_dir: str = "HidroDrawData"):
+        # Determine base path for data storage
+        if getattr(sys, 'frozen', False):
+            # If running as executable, use user's home directory or AppData
+            # Windows: C:\Users\Username\HidroDrawData
+            base_path = Path.home()
+        else:
+            # If running from source, use local directory
+            base_path = Path(__file__).parent
+            
+        self.data_dir = base_path / data_dir
         self.data_dir.mkdir(exist_ok=True)
         self.projects_file = self.data_dir / "projects.json"
         
