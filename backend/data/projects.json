@@ -1,0 +1,24 @@
+[
+  {
+    "id": "fec83e70-e868-4997-9428-5a54e19b780b",
+    "name": "Test Project Local",
+    "description": null,
+    "elements": [],
+    "layers": [
+      {
+        "id": "default",
+        "name": "Layer 1",
+        "visible": true,
+        "locked": false,
+        "color": "#3B82F6"
+      }
+    ],
+    "canvas_width": 2000.0,
+    "canvas_height": 1500.0,
+    "grid_size": 20,
+    "grid_enabled": true,
+    "snap_to_grid": true,
+    "created_at": "2026-01-17T02:32:59.220230+00:00",
+    "updated_at": "2026-01-17T02:32:59.220230+00:00"
+  }
+]
